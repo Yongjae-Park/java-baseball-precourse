@@ -1,5 +1,8 @@
 package baseball.domain;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public enum Rating {
     NOTHING("0,0","낫싱"),
     ONE_BALL("1,0","1볼"),
@@ -20,12 +23,21 @@ public enum Rating {
         this.message = message;
     }
 
-    public static Rating findByScore(String score) {
-        for (Rating rating : values()) {
-            if (score.equals(rating.score)) {
-                return rating;
-            }
-        }
-        return null;
+    static public Map<String,String> getRatingStore() {
+        return ratingStore;
+    }
+
+    static private Map<String,String> ratingStore = new HashMap<>();
+    static{
+        ratingStore.put(NOTHING.score, NOTHING.message);
+        ratingStore.put(ONE_BALL.score, ONE_BALL.message);
+        ratingStore.put(TWO_BALL.score, TWO_BALL.message);
+        ratingStore.put(THREE_BALL.score, TWO_BALL.message);
+        ratingStore.put(ONE_STRIKE.score, ONE_STRIKE.message);
+        ratingStore.put(TWO_STRIKE.score, TWO_STRIKE.message);
+        ratingStore.put(THREE_STRIKE.score, THREE_STRIKE.message);
+        ratingStore.put(ONE_BALL_ONE_STRIKE.score, ONE_BALL_ONE_STRIKE.message);
+        ratingStore.put(ONE_BALL_TWO_STRIKE.score, ONE_BALL_TWO_STRIKE.message);
+        ratingStore.put(TWO_BALL_ONE_STRIKE.score, TWO_BALL_ONE_STRIKE.message);
     }
 }
