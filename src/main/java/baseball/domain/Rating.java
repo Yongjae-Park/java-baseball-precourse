@@ -32,7 +32,7 @@ public enum Rating {
         ratingStore.put(NOTHING.score, NOTHING.message);
         ratingStore.put(ONE_BALL.score, ONE_BALL.message);
         ratingStore.put(TWO_BALL.score, TWO_BALL.message);
-        ratingStore.put(THREE_BALL.score, TWO_BALL.message);
+        ratingStore.put(THREE_BALL.score, THREE_BALL.message);
         ratingStore.put(ONE_STRIKE.score, ONE_STRIKE.message);
         ratingStore.put(TWO_STRIKE.score, TWO_STRIKE.message);
         ratingStore.put(THREE_STRIKE.score, THREE_STRIKE.message);
