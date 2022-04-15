@@ -16,6 +16,8 @@
 ### Rating
 * 게임 포인트(score)와 그에 따른 message를 정의하는 enum
 * score를 입력받아 message를 리턴하는 기능 제공
+### Message
+* 사용자에게 보여줄 메시지를 정의하는 enum
 ### Output
 * 게임 결과 출력 처리를 담당하는 클래스
 ### Computer
