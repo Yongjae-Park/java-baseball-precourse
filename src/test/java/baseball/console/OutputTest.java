@@ -13,7 +13,7 @@ class OutputTest {
         scores[Output.BALL] = 1;
         scores[Output.STRIKE] = 1;
         String message = Output.generateMessage(scores);
-        assertEquals(message,Rating.ONE_BALL_ONE_STRIKE.message);
+        assertEquals(message,Rating.ONE_BALL_ONE_STRIKE.getMessage());
     }
 
 }

@@ -15,12 +15,16 @@ public enum Rating {
     ONE_BALL_TWO_STRIKE("1,2","1볼 2스트라이크"),
     TWO_BALL_ONE_STRIKE("2,1","2볼 1스트라이크");
 
-    public String score;
-    public String message;
+    private String score;
+    private String message;
 
     Rating(String score, String message){
         this.score = score;
         this.message = message;
+    }
+
+    public String getMessage() {
+        return message;
     }
 
     static public Map<String,String> getRatingStore() {
