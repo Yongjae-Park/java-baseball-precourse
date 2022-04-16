@@ -1,8 +1,6 @@
 package baseball.domain;
 
 public class Referee {
-    public static final int BALL = 0;
-    public static final int STRIKE = 1;
     private static final int ZERO_VALUE = 0;
     private int ballCount;
     private int strikeCount;
@@ -24,8 +22,8 @@ public class Referee {
 
     private int[] setScores() {
         int[] scores = new int[2];
-        scores[BALL] = ballCount;
-        scores[STRIKE] = strikeCount;
+        scores[ScoreOption.BALL.getOption()] = ballCount;
+        scores[ScoreOption.STRIKE.getOption()] = strikeCount;
         return scores;
     }
 
