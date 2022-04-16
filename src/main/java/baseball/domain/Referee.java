@@ -11,7 +11,7 @@ public class Referee {
             ballChecker(input.charAt(i), i, answer);
             strikeChecker(input.charAt(i), i, answer);
         }
-        int[] scores = setScores();
+        int[] scores = getScores();
         return scores;
     }
 
@@ -20,7 +20,7 @@ public class Referee {
         strikeCount = ZERO_VALUE;
     }
 
-    private int[] setScores() {
+    private int[] getScores() {
         int[] scores = new int[2];
         scores[ScoreOption.BALL.getOption()] = ballCount;
         scores[ScoreOption.STRIKE.getOption()] = strikeCount;
