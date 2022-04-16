@@ -22,7 +22,9 @@
 * 게임 결과 출력 처리를 담당하는 클래스
 ### Computer
 * 난수 생성 기능 제공
-* 입력값 validation 기능 제공
+* 게임 재시작 옵션값에 대한 판단 기능 제공
+### Validator
+* 사용자 입력값에 대한 validation 담당하는 클래스
 ### Referee
 * 게임 점수의 평가를 담당하는 클래스
 * ballCount, strikeCount를 평가한다.
