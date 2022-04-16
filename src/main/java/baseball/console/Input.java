@@ -8,17 +8,20 @@ public class Input {
     private static final String TERMINATION = "2";
 
     public static String getNumber() {
-        System.out.print(Message.INPUT_MESSAGE.getMessage());
-        String inputNumber = Console.readLine();
+        String inputNumber = inputWithMessage(Message.INPUT_MESSAGE.getMessage());
         return inputNumber;
     }
 
     public static boolean isRestart() {
         boolean isRestart = false;
-        System.out.println(Message.RESTART_OPTION_MESSAGE.getMessage());
-        String answer = Console.readLine();
+        String answer = inputWithMessage(Message.RESTART_OPTION_MESSAGE.getMessage());
         if (answer.equals(RESTART))
             isRestart = true;
         return isRestart;
+    }
+
+    private static String inputWithMessage(String message) {
+        System.out.println(message);
+        return Console.readLine();
     }
 }
