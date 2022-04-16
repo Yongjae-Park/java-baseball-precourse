@@ -1,22 +1,22 @@
 package baseball.console;
 
 import baseball.domain.Message;
+import baseball.domain.Validator;
 import camp.nextstep.edu.missionutils.Console;
 
 public class Input {
-    private static final String RESTART = "1";
-    private static final String TERMINATION = "2";
+
+    private static Validator validator = new Validator();
 
     public static String getNumber() {
         String inputNumber = inputWithMessage(Message.INPUT_MESSAGE.getMessage());
+        validator.inputValidator(inputNumber);
         return inputNumber;
     }
 
-    public static boolean isRestart() {
-        boolean isRestart = false;
-        String answer = inputWithMessage(Message.RESTART_OPTION_MESSAGE.getMessage());
-        if (answer.equals(RESTART))
-            isRestart = true;
+    public static String getRestartOption() {
+        String isRestart = inputWithMessage(Message.RESTART_OPTION_MESSAGE.getMessage());
+        validator.restartOptionValidator(isRestart);
         return isRestart;
     }
 

@@ -6,7 +6,7 @@ public class Computer {
     private final static int MIN_VALUE = 1;
     private final static int MAX_VALUE = 9;
     private final static int NUMBER_LENGTH = 3;
-    private final String NUMBER_REGEX = "[0-9]+";
+    private static final String RESTART = "1";
 
     public String generateNumber() {
         StringBuilder randomNumbers = new StringBuilder();
@@ -24,25 +24,11 @@ public class Computer {
         return String.valueOf(randomNumber);
     }
 
-    public void inputValidator(String inputNumber) {
-        if (!validateNumeric(inputNumber)) {
-            throw new IllegalArgumentException(Message.IS_NOT_ONLY_NUMBER_MESSAGE.getMessage());
-        }
-        if (!validateSize(inputNumber)) {
-            throw new IllegalArgumentException(Message.IS_NOT_THREE_DIGIT_NUMBER_MESSAGE.getMessage());
-        }
+    public static boolean isRestart(String option) {
+        boolean isRestart = false;
+        if (option.equals(RESTART))
+            isRestart = true;
+        return isRestart;
     }
 
-    private boolean validateNumeric(String inputNumber) {
-        boolean isNumeric = inputNumber.matches(NUMBER_REGEX);
-        return isNumeric;
-    }
-
-    private boolean validateSize(String inputNumber) {
-        boolean isThreeDigitNumber = true;
-        if (inputNumber.length() != 3)
-            isThreeDigitNumber = false;
-        return isThreeDigitNumber;
-
-    }
 }
