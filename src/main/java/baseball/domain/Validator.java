@@ -20,7 +20,7 @@ public class Validator {
 
     private boolean validateSize(String inputNumber) {
         boolean isThreeDigitNumber = true;
-        if (inputNumber.length() != 3)
+        if (inputNumber.length() != InputCondition.NUMBER_LENGTH.getValue())
             isThreeDigitNumber = false;
         return isThreeDigitNumber;
     }
