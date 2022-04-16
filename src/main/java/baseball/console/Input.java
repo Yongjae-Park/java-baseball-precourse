@@ -13,11 +13,11 @@ public class Input {
         return inputNumber;
     }
 
-    public static boolean isRestart(){
+    public static boolean isRestart() {
         boolean isRestart = false;
         System.out.println(Message.RESTART_OPTION_MESSAGE.getMessage());
         String answer = Console.readLine();
-        if(answer.equals(RESTART))
+        if (answer.equals(RESTART))
             isRestart = true;
         return isRestart;
     }

@@ -7,11 +7,11 @@ public class Referee {
     private int ballCount;
     private int strikeCount;
 
-    public int[] scoreRater(String input, String answer){
+    public int[] scoreRater(String input, String answer) {
         setBallAndStrikeCountInitialValue();
-        for(int i=0;i<input.length();i++){
-            ballChecker(input.charAt(i),i,answer);
-            strikeChecker(input.charAt(i),i,answer);
+        for (int i = 0; i < input.length(); i++) {
+            ballChecker(input.charAt(i), i, answer);
+            strikeChecker(input.charAt(i), i, answer);
         }
         int[] scores = setScores();
         return scores;
@@ -22,20 +22,20 @@ public class Referee {
         strikeCount = ZERO_VALUE;
     }
 
-    private int[] setScores(){
+    private int[] setScores() {
         int[] scores = new int[2];
         scores[BALL] = ballCount;
         scores[STRIKE] = strikeCount;
         return scores;
     }
 
-    private void ballChecker(char input, int index, String answer){
-        if(answer.contains(String.valueOf(input)) && answer.indexOf(input)!=index)
+    private void ballChecker(char input, int index, String answer) {
+        if (answer.contains(String.valueOf(input)) && answer.indexOf(input) != index)
             ballCount++;
     }
 
-    private void strikeChecker(char input, int index, String answer){
-        if(answer.indexOf(String.valueOf(input))==index)
+    private void strikeChecker(char input, int index, String answer) {
+        if (answer.indexOf(String.valueOf(input)) == index)
             strikeCount++;
     }
 }

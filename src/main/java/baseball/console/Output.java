@@ -16,6 +16,6 @@ public class Output {
     }
 
     private static String generateScore(int[] scores) {
-        return String.valueOf(scores[BALL]) +","+ String.valueOf(scores[STRIKE]);
+        return String.valueOf(scores[BALL]) + "," + String.valueOf(scores[STRIKE]);
     }
 }
