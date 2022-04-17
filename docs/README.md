@@ -28,6 +28,10 @@
 ### Referee
 * 게임 점수의 평가를 담당하는 클래스
 * ballCount, strikeCount를 평가한다.
+### ScoreOption
+* score 배열에서 인덱스로 사용할 값을 정의한 enum
+### InputCondition
+* 사용자 입력값의 제한조건을 정의한 enum
 
 ## 기능 요구사항
 * 기본적으로 1부터 9까지 서로 다른 수로 이루어진 3자리의 수를 맞추는 게임이다.
